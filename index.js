@@ -9,7 +9,11 @@ const orders = require("./routes/orders");
 
 connectDB();
 
-app.use(cors());
+app.use(cors({
+    origin: ["http://localhost:5173", "https://e-commerence-fe.vercel.app"],
+    credentials: true
+}));
+
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
