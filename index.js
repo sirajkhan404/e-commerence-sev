@@ -23,6 +23,13 @@ app.use("/api/orders", orders);
 
 const { PORT = 8000 } = process.env;
 
+app.get("/", (req, res) => {
+    res.status(200).json({
+        success: true,
+        message: "E-Commerce app is running 🚀"
+    });
+});
+
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
 });
