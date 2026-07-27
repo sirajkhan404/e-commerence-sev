@@ -6,6 +6,10 @@ const { connectDB } = require("./config/db");
 const auth = require("./routes/auth");
 const products = require("./routes/products");
 const orders = require("./routes/orders");
+const dns = require("dns")
+
+
+dns.setServers(["1.1.1.1", "8.8.8.8"])
 
 connectDB();
 
